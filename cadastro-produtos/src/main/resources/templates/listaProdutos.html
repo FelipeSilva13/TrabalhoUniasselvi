@@ -12,6 +12,7 @@
 
 <a href="/produtos/novo">Novo Produto</a>
 
+
 <table border="1">
     <tr>
         <th>ID</th>
@@ -20,6 +21,7 @@
         <th>Preço</th>
         <th>Ações</th>
     </tr>
+
     <tr th:each="produto : ${produtos}">
         <td th:text="${produto.id}">1</td>
         <td th:text="${produto.nome}">Nome</td>

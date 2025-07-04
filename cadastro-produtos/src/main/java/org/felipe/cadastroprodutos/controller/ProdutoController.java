@@ -1,12 +1,13 @@
 package org.felipe.cadastroprodutos.controller;
 
+import jakarta.persistence.Entity;
 import org.felipe.cadastroprodutos.model.Produto;
-import org.felipe.cadastroprodutos.repository.CategoriaRepository;
 import org.felipe.cadastroprodutos.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
 
 @Controller
 public class ProdutoController {
@@ -14,8 +15,6 @@ public class ProdutoController {
     @Autowired
     private ProdutoRepository repository;
 
-    @Autowired
-    private CategoriaRepository categoriaRepository;
 
     @GetMapping("/")
     public String home() {
